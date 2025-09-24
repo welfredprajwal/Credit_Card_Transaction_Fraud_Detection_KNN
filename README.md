@@ -48,6 +48,33 @@ The dataset consists of anonymized credit card transactions with numerical featu
 
     Confusion Matrix
 
+# Process
+
+1.Load and preprocess data
+
+    Separate features (Time, V1–V28, Amount) and target (Class).
+
+    Normalize features (StandardScaler) so that KNN distance works properly.
+
+    Handle imbalance
+
+    Fraud cases are very rare (<0.2% of data).
+
+    Use SMOTE oversampling or undersample majority class for balance.
+
+2.Train-Test Split
+
+    Split into 70% training, 30% testing.
+
+    Train KNN
+
+    Fit with an optimal k (usually between 3–7).
+
+3.Evaluate
+
+    Compute confusion matrix, accuracy, precision, recall, F1-score, ROC-AUC.
+    
+
 # Results
 
 | Metric    | Score (Example) |
